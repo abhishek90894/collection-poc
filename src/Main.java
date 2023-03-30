@@ -70,6 +70,56 @@ public class Main {
         while(itr4.hasNext()){
             System.out.println(itr4.next());
         }
+
+        /**
+         * The PriorityQueue class implements the Queue interface.
+         * It holds the elements or objects which are to be processed by their priorities.
+         * PriorityQueue doesn't allow null values to be stored in the queue.
+         */
+
+        System.out.println(" PRIORITY   QUEUE ***************************");
+        Queue<String> queue= new PriorityQueue<String>();
+        queue.add("ankita");
+        queue.add("Sharma");
+        queue.add("ankur");
+        queue.add("srivastava");
+        queue.add("sonal");
+        System.out.println("head:"+queue.element());
+       System.out.println("head:"+queue.peek());
+        System.out.println("iterating the queue elements:");
+        Iterator itr5=queue.iterator();
+        while(itr5.hasNext()){
+            System.out.println(itr5.next());
+        }
+       queue.remove(); //remove the head of this queue and through the exception if queue is empty
+        System.out.println(queue);
+       queue.poll(); //remove the head of the queue and return null if the queue is empty
+       System.out.println("after removing two elements:");
+       Iterator<String> itr6=queue.iterator();
+       while(itr6.hasNext()){
+          System.out.println(itr6.next());
+       }
+        /**
+         * HashSet class implements Set Interface.
+         * It represents the collection that uses a hash table for storage.
+         * Hashing is used to store the elements in the HashSet.
+         * It contains unique items.
+         * It stores in unordered way
+         *
+         */
+        System.out.println("********* HashSet*********************************");
+        HashSet<String> set=new HashSet<String>();
+        set.add("Ravi");
+        set.add("Vijay");
+        set.add("Ravi");
+        set.add("Ajay");
+        set.add(null);
+      //Traversing elements
+        Iterator<String> itr7=set.iterator();
+        while(itr7.hasNext()){
+            System.out.println(itr7.next());
+        }
+
     }
 }
 
